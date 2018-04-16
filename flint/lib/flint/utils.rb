@@ -15,6 +15,8 @@ module Flint
       template.gsub!("[[KEY_ALIAS]]", alias_name)
       template.gsub!("[[PASSWORD]]", password)
       File.write(keystore_properties_path, template)
+
+      # We could test that the required lines are added to build.gradle
     end
 
     def self.installed?(item_path, target_path)
